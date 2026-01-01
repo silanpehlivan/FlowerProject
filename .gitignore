@@ -1,0 +1,19 @@
+# Ignore archived artifacts moved out of the project root
+archive/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment (if present)
+venv/
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+flower_photos/ 
