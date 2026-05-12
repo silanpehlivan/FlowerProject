@@ -116,5 +116,13 @@ negatif örneklerle gerçekleştirilen model iyileştirmelerini, Flask uygulamas
 kararlılık ve kullanıcı deneyimi düzenlemelerini ve dosyaların archive/ yapısı altına
 taşınmasını özetlemektedir.
 
+---
+## 📄 Lisans
+
+Bu proje, [LICENSE](LICENSE ) dosyasında belirtilen lisans koşulları altında yayınlanmıştır.
+---
+## 👨‍💻 Geliştirici
+
+**Şilan Pehlivan**
 
 
