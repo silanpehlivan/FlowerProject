@@ -114,14 +114,13 @@ pip install -r requirements.txt
 Bu README, projede benim tarafımdan yapılan **transfer learning entegrasyonunu**, negatif örneklerle gerçekleştirilen **model iyileştirmelerini**, Flask uygulamasına yönelik **kararlılık ve kullanıcı deneyimi düzenlemelerini** ve dosyaların `archive/` yapısı altına taşınmasını özetlemektedir.
 
 
-## 📄 Lisans
+## 📜 Lisans
 
-Bu proje, [LICENSE](LICENSE) dosyasında belirtilen lisans koşulları altında yayınlanmıştır.
+Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
 
+## 👩‍💻 Geliştirici
 
-## 👨‍💻 Geliştirici
-
-**Şilan Pehlivan**
+Şilan Pehlivan
 
 
 
