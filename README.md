@@ -122,6 +122,6 @@ Bu proje, [LICENSE](LICENSE) dosyasında belirtilen lisans koşulları altında 
 ## 👨‍💻 Geliştirici
 
 **Şilan Pehlivan**
----
+
 
 
