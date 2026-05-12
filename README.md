@@ -108,7 +108,7 @@ Proje kök dizininde kalabalık oluşturan ve aktif olarak kullanılmayan dosyal
 cd 'C:\Users\HP\Desktop\FlowerProject'
 pip install -r requirements.txt
 
-
+---
 📝 Notlar
 
 Bu README, projede benim tarafımdan yapılan transfer learning entegrasyonunu,
