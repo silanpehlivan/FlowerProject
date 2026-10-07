@@ -2,192 +2,31 @@
 
 # Flower Classifier
 
-### Bir fotoğraftan çiçeğin türüne.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=19&duration=3500&pause=2200&color=a78bfa&background=0D1117&center=true&vCenter=true&width=760&height=76&lines=Bir%20foto%C4%9Fraftan%20%C3%A7i%C3%A7e%C4%9Fin%20t%C3%BCr%C3%BCne." alt="Bir fotoğraftan çiçeğin türüne." width="760" />
 
-![Python](https://img.shields.io/badge/Python-2563eb?style=for-the-badge)
-![Flask](https://img.shields.io/badge/Flask-0891b2?style=for-the-badge)
-![MobileNetV2](https://img.shields.io/badge/MobileNetV2-7c3aed?style=for-the-badge)
-[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
+<br />
+
+<img alt="Python" src="https://img.shields.io/badge/Python-a78bfa?style=for-the-badge" />
+<img alt="Flask" src="https://img.shields.io/badge/Flask-7c3aed?style=for-the-badge" />
+<img alt="MobileNetV2" src="https://img.shields.io/badge/MobileNetV2-0891b2?style=for-the-badge" />
+
+<br /><br />
 
 Görselleri MobileNetV2 özellikleri ve SVM sınıflandırıcısıyla analiz eden Flask tabanlı çiçek sınıflandırma uygulaması.
 
-**Transfer learning ile çiçek sınıflandırma**
+<br />
 
-[Projeyi keşfet](https://github.com/silanpehlivan/FlowerProject/tree/master) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
+**TensorFlow Flowers üzerinde beş sınıflı analiz** &nbsp; · &nbsp; **Çiçek olmayan örneklerle geliştirilmiş sınıflandırma** &nbsp; · &nbsp; **Görsel yükleme, önizleme ve güven kontrolleri**
+
+<br /><br />
+
+[![Projeyi keşfet](https://img.shields.io/badge/PROJEYİ_KEŞFET-7c3aed?style=for-the-badge)](https://github.com/silanpehlivan/FlowerProject/tree/master)
+[![Kurulum](https://img.shields.io/badge/KURULUM_&_TEKNİK_NOTLAR-334155?style=for-the-badge)](PROJECT_GUIDE.md)
 
 </div>
 
 ---
 
-## İçeride neler var?
-
-- **01** · TensorFlow Flowers üzerinde beş sınıflı analiz
-- **02** · Çiçek olmayan örneklerle geliştirilmiş sınıflandırma
-- **03** · Görsel yükleme, önizleme ve güven kontrolleri
-
-## Projeyi çalıştırmak ve incelemek
-
-<details>
-<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
-
-## Öne Çıkanlar
-
-- TensorFlow Flowers üzerinde beş sınıflı analiz
-- Çiçek olmayan örneklerle geliştirilmiş sınıflandırma
-- Görsel yükleme, önizleme ve güven kontrolleri
-
-## Teknolojiler
-
-Python · Flask · MobileNetV2 · SVM
-
-### Teknik yaklaşım
-
-MobileNetV2 bottleneck özellikleri ve klasik RGB/HSV, LBP ve GLCM çıkarım fonksiyonları depoda yer alır. Flask uygulaması yüklenen görseli sınıflandırma akışına taşır.
-
-```mermaid
-flowchart LR
-A[Görsel yükleme] --> B[Öznitelik çıkarımı]
-B --> C[Sınıflandırıcı]
-C --> D[Flask sonuç ekranı]
-```
-
-### Kodu incelemeye başlayın
-
-- [app.py](app.py)
-- [feature_extraction.py](feature_extraction.py)
-- [templates/index.html](templates/index.html)
-- [validate_setup.py](validate_setup.py)
-
-### Kapsam ve sınırlar
-
-Sonuçlar eğitim dağılımına bağlıdır. Güven eşiği, çiçek olmayan tüm görselleri güvenilir şekilde reddetme garantisi değildir.
-
-
-
-Bu repoda, başlangıçta klasik **renk ve doku tabanlı öznitelikler** kullanılarak geliştirilen bir çiçek sınıflandırma projesi yer almaktadır. Proje daha sonra **Transfer Learning (MobileNetV2)** tabanlı bir pipeline ve **SVM sınıflandırıcısı** ile güçlendirilmiş; ayrıca **Flask uygulaması** tarafında kararlılık ve kullanıcı deneyimini artırmaya yönelik çeşitli iyileştirmeler yapılmıştır.
-
-Bu README aşağıdaki bölümleri içermektedir:
-- Projenin kısa özeti  
-- Yapılan önemli değişikliklerin özeti  
-- Uygulamanın düzgün çalışması için korunmuş dosyalar  
-- `archive/` dizinine taşınan dosyaların listesi  
-
----
-
-## Kısa Öz
-
-- **Veri seti:** `flower_photos/` (TensorFlow Flowers veri seti, 5 sınıf)  
-- **Ana model:** MobileNetV2 üzerinden çıkarılan bottleneck özellikleri + SVM  
-  (negatif/çiçek olmayan örneklerle iyileştirilmiştir)  
-- **Web arayüzü:** Flask tabanlı uygulama (`app.py`)  
-
----
-
-## Yapılan Önemli Değişiklikler
-
-- **Transfer Learning (MobileNetV2)** kullanılarak 1280 boyutlu bottleneck özelliklerinin çıkarılması eklendi  
-  (`feature_extraction.py`, `extract_tl_features`).
-- Transfer Learning özellikleri üzerinde **SVM modeli eğitildi** ve **negatif (çiçek olmayan) örnekler** eklenerek  
-  `tl_improved_svm_model.pkl` ve `tl_improved_scaler.pkl` dosyaları oluşturuldu.  
-  Bu sayede çiçek olmayan görsellerin reddedilmesi sağlandı.
-- `app.py` tarafında:
-  - Ana model seçimini yöneten merkezi `MAIN_MODEL_KEY` yapısı düzenlendi.
-  - Transfer Learning tabanlı **confidence (güven) kontrolleri** ve `skip_other_models` bayrağı eklendi.
-  - Flask’ın reloader/dev-mode kaynaklı kararsızlıklarını önlemek için uygulama  
-    `debug=False, use_reloader=False` ayarlarıyla yapılandırıldı.
-- **Kullanıcı arayüzü (UI) iyileştirmeleri:**  
-  `templates/index.html` ve `static/css/custom.css` dosyalarında;
-  - sürükle-bırak (drag & drop),
-  - görsel önizleme,
-  - yükleme spinner’ı, 
-  eklendi.
-
----
-
-## Korunan Dosyalar (Uygulamanın Çalışması İçin)
-
-Aşağıdaki dosya ve klasörler uygulamanın sorunsuz çalışması için korunmuştur:
-
-- `app.py`  
-- `feature_extraction.py`  
-- `templates/`  
-- `static/`  
-- `static/uploads/`  
-
-**Aktif ve korunan modeller / scaler dosyaları:**
-- `tl_improved_svm_model.pkl`  
-- `tl_improved_scaler.pkl`  
-- `svm_(rbf_kernel)_model.pkl`  
-- `knn_(k=5)_model.pkl`  
-- `naive_bayes_model.pkl`  
-- `scaler.pkl` (fallback)
-
----
-
-## Arşivlenen Dosyalar (`archive/`)
-
-Proje kök dizininde kalabalık oluşturan ve aktif olarak kullanılmayan dosyalar `archive/` klasörü altına taşınmıştır.
-
-### `archive/models/`
-- `best_svm_model.pkl`
-- `best_svm_random_tuned.pkl`
-- `best_svm_classweight.pkl`
-- `scaler_classweight.pkl`
-- `temel_svm_rbf_kernel_model.pkl`
-- `tl_svm_model.pkl`
-- `tl_scaler.pkl`
-- `tl_bottleneck_features.npz`
-- `features_combined.pkl`
-- `features_color_only.pkl`
-
-### `archive/scripts/`
-- `train_improved_tl_model.py`
-- `transfer_mobilenet_svm.py`
-- `svm_random_tune.py`
-- `svm_optimization.py`
-- `svm_classweight_trial.py`
-- `model_training.py`
-- `read_features.py`
-- `quick_boost.py`
-- `inspect_models.py`
-- `compute_model_stats.py`
-- `analyze_misclass.py`
-- `predict_single_image.py`
-
-### `archive/images/`
-- Confusion matrix çıktıları, `prediction_result.png` ve çeşitli ekran görüntüleri.
-
-> **Not:** Arşiv içeriğini görmek için:
-> ```powershell
-> Get-ChildItem -Recurse archive
-> ```
-
----
-
-## Hızlı Çalıştırma
-
-1) Gerekli paketleri yükleyin:
-
-```powershell
-cd FlowerProject
-pip install -r requirements.txt
-```
----
-## Notlar
-
-Bu README, projede benim tarafımdan yapılan **transfer learning entegrasyonunu**, negatif örneklerle gerçekleştirilen **model iyileştirmelerini**, Flask uygulamasına yönelik **kararlılık ve kullanıcı deneyimi düzenlemelerini** ve dosyaların `archive/` yapısı altına taşınmasını özetlemektedir.
-
-
-
-
-</details>
-
----
-
 <div align="center">
-
-**© 2026 Şilan PEHLİVAN**
-
-Bu proje MIT lisansı kapsamında sunulmaktadır. Kullanım ve dağıtım koşulları: [LICENSE](LICENSE).
-
+<sub>© 2026 Şilan PEHLİVAN · <a href="LICENSE">MIT lisansı</a></sub>
 </div>
