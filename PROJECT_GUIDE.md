@@ -166,11 +166,14 @@ Proje kök dizininde kalabalık oluşturan ve aktif olarak kullanılmayan dosyal
 
 ## Hızlı Çalıştırma
 
+Depoda `requirements.txt` bulunmaz. Aşağıdaki paketler kodun importlarından türetilmiştir; model dosyalarının üretildiği sürümlerle uyumluluk ayrıca kontrol edilmelidir.
+
 1) Gerekli paketleri yükleyin:
 
 ```powershell
 cd FlowerProject
-pip install -r requirements.txt
+python -m pip install flask werkzeug numpy pandas scipy scikit-image scikit-learn tensorflow
+python app.py
 ```
 ---
 ## Notlar
