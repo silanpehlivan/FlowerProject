@@ -25,6 +25,28 @@ Görselleri MobileNetV2 özellikleri ve SVM sınıflandırıcısıyla analiz ede
 
 Python · Flask · MobileNetV2 · SVM
 
+## Teknik yaklaşım
+
+MobileNetV2 bottleneck özellikleri ve klasik RGB/HSV, LBP ve GLCM çıkarım fonksiyonları depoda yer alır. Flask uygulaması yüklenen görseli sınıflandırma akışına taşır.
+
+```mermaid
+flowchart LR
+A[Görsel yükleme] --> B[Öznitelik çıkarımı]
+B --> C[Sınıflandırıcı]
+C --> D[Flask sonuç ekranı]
+```
+
+## Kodu incelemeye başlayın
+
+- [app.py](app.py)
+- [feature_extraction.py](feature_extraction.py)
+- [templates/index.html](templates/index.html)
+- [validate_setup.py](validate_setup.py)
+
+## Kapsam ve sınırlar
+
+Sonuçlar eğitim dağılımına bağlıdır. Güven eşiği, çiçek olmayan tüm görselleri güvenilir şekilde reddetme garantisi değildir.
+
 <details>
 <summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
