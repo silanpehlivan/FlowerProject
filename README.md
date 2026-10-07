@@ -1,4 +1,32 @@
-# 🌸 Çiçek Sınıflandırma — Proje Özeti ve Değişiklik Günlüğü
+<div align="center">
+
+# Flower Classifier
+
+**Transfer learning ile çiçek sınıflandırma**
+
+![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
+![Flask](https://img.shields.io/badge/Flask-0891b2?style=flat-square)
+![MobileNetV2](https://img.shields.io/badge/MobileNetV2-7c3aed?style=flat-square)
+[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+
+Görselleri MobileNetV2 özellikleri ve SVM sınıflandırıcısıyla analiz eden Flask tabanlı çiçek sınıflandırma uygulaması.
+
+</div>
+
+---
+
+## Öne Çıkanlar
+
+- TensorFlow Flowers üzerinde beş sınıflı analiz
+- Çiçek olmayan örneklerle geliştirilmiş sınıflandırma
+- Görsel yükleme, önizleme ve güven kontrolleri
+
+## Teknolojiler
+
+Python · Flask · MobileNetV2 · SVM
+
+<details>
+<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
 
 Bu repoda, başlangıçta klasik **renk ve doku tabanlı öznitelikler** kullanılarak geliştirilen bir çiçek sınıflandırma projesi yer almaktadır. Proje daha sonra **Transfer Learning (MobileNetV2)** tabanlı bir pipeline ve **SVM sınıflandırıcısı** ile güçlendirilmiş; ayrıca **Flask uygulaması** tarafında kararlılık ve kullanıcı deneyimini artırmaya yönelik çeşitli iyileştirmeler yapılmıştır.
 
@@ -10,7 +38,7 @@ Bu README aşağıdaki bölümleri içermektedir:
 
 ---
 
-## 📌 Kısa Öz
+## Kısa Öz
 
 - **Veri seti:** `flower_photos/` (TensorFlow Flowers veri seti, 5 sınıf)  
 - **Ana model:** MobileNetV2 üzerinden çıkarılan bottleneck özellikleri + SVM  
@@ -19,7 +47,7 @@ Bu README aşağıdaki bölümleri içermektedir:
 
 ---
 
-## 🔧 Yapılan Önemli Değişiklikler
+## Yapılan Önemli Değişiklikler
 
 - **Transfer Learning (MobileNetV2)** kullanılarak 1280 boyutlu bottleneck özelliklerinin çıkarılması eklendi  
   (`feature_extraction.py`, `extract_tl_features`).
@@ -40,7 +68,7 @@ Bu README aşağıdaki bölümleri içermektedir:
 
 ---
 
-## 🛡️ Korunan Dosyalar (Uygulamanın Çalışması İçin)
+## Korunan Dosyalar (Uygulamanın Çalışması İçin)
 
 Aşağıdaki dosya ve klasörler uygulamanın sorunsuz çalışması için korunmuştur:
 
@@ -60,7 +88,7 @@ Aşağıdaki dosya ve klasörler uygulamanın sorunsuz çalışması için korun
 
 ---
 
-## 📦 Arşivlenen Dosyalar (`archive/`)
+## Arşivlenen Dosyalar (`archive/`)
 
 Proje kök dizininde kalabalık oluşturan ve aktif olarak kullanılmayan dosyalar `archive/` klasörü altına taşınmıştır.
 
@@ -100,27 +128,28 @@ Proje kök dizininde kalabalık oluşturan ve aktif olarak kullanılmayan dosyal
 
 ---
 
-## 🚀 Hızlı Çalıştırma
+## Hızlı Çalıştırma
 
 1) Gerekli paketleri yükleyin:
 
 ```powershell
-cd 'C:\Users\HP\Desktop\FlowerProject'
+cd FlowerProject
 pip install -r requirements.txt
 ```
 ---
-## 📝 Notlar
+## Notlar
 
 Bu README, projede benim tarafımdan yapılan **transfer learning entegrasyonunu**, negatif örneklerle gerçekleştirilen **model iyileştirmelerini**, Flask uygulamasına yönelik **kararlılık ve kullanıcı deneyimi düzenlemelerini** ve dosyaların `archive/` yapısı altına taşınmasını özetlemektedir.
 
 
-## 📜 Lisans
+</details>
 
-Bu proje **MIT License** ile lisanslanmıştır. Detaylı bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+---
 
-## 👩‍💻 Geliştirici
+<div align="center">
 
-Şilan PEHLİVAN
+**© 2026 Şilan PEHLİVAN**
 
+Bu proje MIT lisansı kapsamında sunulmaktadır. Kullanım ve dağıtım koşulları: [LICENSE](LICENSE).
 
-
+</div>
