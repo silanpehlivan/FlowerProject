@@ -2,18 +2,33 @@
 
 # Flower Classifier
 
-**Transfer learning ile çiçek sınıflandırma**
+### Bir fotoğraftan çiçeğin türüne.
 
-![Python](https://img.shields.io/badge/Python-2563eb?style=flat-square)
-![Flask](https://img.shields.io/badge/Flask-0891b2?style=flat-square)
-![MobileNetV2](https://img.shields.io/badge/MobileNetV2-7c3aed?style=flat-square)
-[![MIT License](https://img.shields.io/badge/License-MIT-16a34a?style=flat-square)](LICENSE)
+![Python](https://img.shields.io/badge/Python-2563eb?style=for-the-badge)
+![Flask](https://img.shields.io/badge/Flask-0891b2?style=for-the-badge)
+![MobileNetV2](https://img.shields.io/badge/MobileNetV2-7c3aed?style=for-the-badge)
+[![MIT](https://img.shields.io/badge/MIT-16a34a?style=for-the-badge)](LICENSE)
 
 Görselleri MobileNetV2 özellikleri ve SVM sınıflandırıcısıyla analiz eden Flask tabanlı çiçek sınıflandırma uygulaması.
+
+**Transfer learning ile çiçek sınıflandırma**
+
+[Projeyi keşfet](https://github.com/silanpehlivan/FlowerProject/tree/master) · [Kurulum ve ayrıntılar](#projeyi-çalıştırmak-ve-incelemek)
 
 </div>
 
 ---
+
+## İçeride neler var?
+
+- **01** · TensorFlow Flowers üzerinde beş sınıflı analiz
+- **02** · Çiçek olmayan örneklerle geliştirilmiş sınıflandırma
+- **03** · Görsel yükleme, önizleme ve güven kontrolleri
+
+## Projeyi çalıştırmak ve incelemek
+
+<details>
+<summary><strong>Kurulum, kod yapısı ve teknik notları aç</strong></summary>
 
 ## Öne Çıkanlar
 
@@ -25,7 +40,7 @@ Görselleri MobileNetV2 özellikleri ve SVM sınıflandırıcısıyla analiz ede
 
 Python · Flask · MobileNetV2 · SVM
 
-## Teknik yaklaşım
+### Teknik yaklaşım
 
 MobileNetV2 bottleneck özellikleri ve klasik RGB/HSV, LBP ve GLCM çıkarım fonksiyonları depoda yer alır. Flask uygulaması yüklenen görseli sınıflandırma akışına taşır.
 
@@ -36,19 +51,18 @@ B --> C[Sınıflandırıcı]
 C --> D[Flask sonuç ekranı]
 ```
 
-## Kodu incelemeye başlayın
+### Kodu incelemeye başlayın
 
 - [app.py](app.py)
 - [feature_extraction.py](feature_extraction.py)
 - [templates/index.html](templates/index.html)
 - [validate_setup.py](validate_setup.py)
 
-## Kapsam ve sınırlar
+### Kapsam ve sınırlar
 
 Sonuçlar eğitim dağılımına bağlıdır. Güven eşiği, çiçek olmayan tüm görselleri güvenilir şekilde reddetme garantisi değildir.
 
-<details>
-<summary><strong>Kurulum, kullanım ve teknik ayrıntılar</strong></summary>
+
 
 Bu repoda, başlangıçta klasik **renk ve doku tabanlı öznitelikler** kullanılarak geliştirilen bir çiçek sınıflandırma projesi yer almaktadır. Proje daha sonra **Transfer Learning (MobileNetV2)** tabanlı bir pipeline ve **SVM sınıflandırıcısı** ile güçlendirilmiş; ayrıca **Flask uygulaması** tarafında kararlılık ve kullanıcı deneyimini artırmaya yönelik çeşitli iyileştirmeler yapılmıştır.
 
@@ -162,6 +176,8 @@ pip install -r requirements.txt
 ## Notlar
 
 Bu README, projede benim tarafımdan yapılan **transfer learning entegrasyonunu**, negatif örneklerle gerçekleştirilen **model iyileştirmelerini**, Flask uygulamasına yönelik **kararlılık ve kullanıcı deneyimi düzenlemelerini** ve dosyaların `archive/` yapısı altına taşınmasını özetlemektedir.
+
+
 
 
 </details>
